@@ -14,7 +14,7 @@ Headers and paramters can be defined as strings, though, it's recommended you us
 
 ### Dependencies 
 
-Please make sure to install `JSON.scpt` alongside `httpReqest.scpt` in the Script Libraries folder. 
+Please make sure to install `JSON.scpt` alongside `httpReqest.scpt` in the Script Libraries folder on your machine. You can find these in the Scripts folder. 
 
 That's how it will work best, though, you are certainly entitled to change the locations. You'll just want to update the `JSON` property if you do so that it can load the script properly.
 
@@ -41,4 +41,4 @@ set aUsableRecord to JSON's JSONify(response)
 log body of aUsableRecord
 ```
 
-Please refer to the `examples.scpt` for more examples.
+Please refer to the `examples.applescript` for more examples.
