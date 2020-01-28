@@ -45,7 +45,9 @@ You can also stringify:
 
 ```Applescript
 set parameters to {|id|:101, title:"foo", body:"bar", userId:1}
-set JSONstring to JSON's stringify(parameters) 
+set JSONstring to JSON's stringify(parameters)
+
+log JSONstring
 ```
 
 Please refer to the `examples.applescript` for more examples.

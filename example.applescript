@@ -5,8 +5,7 @@ property JSON : script "JSON"
 -- // get
 set response to JSON's objectify(httpRequest's |get|("https://jsonplaceholder.typicode.com/posts/1"))
 
-log title of response & ", by " & userId of response & "
-" & body of response
+log title of response & ", by " & userId of response & "\n" & body of response
 
 -- // post
 set headers to "\"Content-Type: application/json; charset=UTF-8\""
@@ -17,8 +16,7 @@ set JSONstring to JSON's stringify(parameters)
 set response to JSON's Â
 	objectify(httpRequest's post("https://jsonplaceholder.typicode.com/posts", headers, JSONstring))
 
-log title of response & ", by " & userId of response & "
-" & body of response
+log title of response & ", by " & userId of response & "\n" & body of response
 
 -- // put
 set updatedParameters to {|id|:102, title:"foo", body:"bar", userId:"Tim"}
