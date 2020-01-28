@@ -2,7 +2,7 @@
 
 A simplistic set of scripts to make HTTP Requests a little easier. Using the JSON companion script, it will take parameters as an Applescript record or list. It will also return JSON objects as a record or list. 
 
-This companion script is similar to [JSON Helper](https://www.mousedown.net/software/JSONHelper.html "JSON Helper") but does not require a third-party app to do use.
+This companion script is similar to [JSON Helper](https://www.mousedown.net/software/JSONHelper.html "JSON Helper") but does not require a third-party app to do so.
 
 HTTP Requests uses Curl to make it's basic requests and can currenlty perform the following:
 * GET
