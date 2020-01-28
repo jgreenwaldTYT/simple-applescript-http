@@ -36,9 +36,16 @@ A simple GET request:
 
 ```Applescript
 set response to httpRequest's |get|("https://jsonplaceholder.typicode.com/posts/1")
-set aUsableRecord to JSON's JSONify(response)
+set aRecord to JSON's objectify(response)
 
-log body of aUsableRecord
+log body of aRecord
+```
+
+You can also stringify:
+
+```Applescript
+set parameters to {|id|:101, title:"foo", body:"bar", userId:1}
+set JSONstring to JSON's stringify(parameters) 
 ```
 
 Please refer to the `examples.applescript` for more examples.

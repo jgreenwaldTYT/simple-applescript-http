@@ -23,7 +23,7 @@ on stringify(JSONObject) -- (Record or List) as String
 	end try
 end stringify
 
-on JSONify(aString)
+on objectify(aString)
 	try
 		set stringObject to NSString's alloc()'s initWithString:aString
 		set dataObject to stringObject's dataUsingEncoding:(current application's NSUTF8StringEncoding)
@@ -43,4 +43,4 @@ on JSONify(aString)
 	on error errMessage
 		error errMessage
 	end try
-end JSONify
+end objectify

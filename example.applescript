@@ -2,20 +2,20 @@
 property httpRequest : script "httpRequest"
 property JSON : script "JSON"
 
-set headers to "\"Content-Type: application/json; charset=UTF-8\""
-set parameters to {|id|:101, title:"foo", body:"bar", userId:1}
-
-set JSONstring to JSON's stringify(parameters)
-
 -- // get
-set response to JSON's JSONify(httpRequest's |get|("https://jsonplaceholder.typicode.com/posts/1"))
+set response to JSON's objectify(httpRequest's |get|("https://jsonplaceholder.typicode.com/posts/1"))
 
 log title of response & ", by " & userId of response & "
 " & body of response
 
 -- // post
+set headers to "\"Content-Type: application/json; charset=UTF-8\""
+set parameters to {|id|:101, title:"foo", body:"bar", userId:1}
+
+set JSONstring to JSON's stringify(parameters)
+
 set response to JSON's Â
-	JSONify(httpRequest's post("https://jsonplaceholder.typicode.com/posts", headers, JSONstring))
+	objectify(httpRequest's post("https://jsonplaceholder.typicode.com/posts", headers, JSONstring))
 
 log title of response & ", by " & userId of response & "
 " & body of response
@@ -24,10 +24,9 @@ log title of response & ", by " & userId of response & "
 set updatedParameters to {|id|:102, title:"foo", body:"bar", userId:"Tim"}
 
 set response to JSON's Â
-	JSONify(httpRequest's |put|("https://jsonplaceholder.typicode.com/posts/1", headers, JSON's stringify(updatedParameters)))
+	objectify(httpRequest's |put|("https://jsonplaceholder.typicode.com/posts/1", headers, JSON's stringify(updatedParameters)))
 
-log title of response & ", by " & userId of response & "
-" & body of response
+log title of response & ", by " & userId of response & "\n" & body of response
 
 -- // delete
 httpRequest's |delete|("https://jsonplaceholder.typicode.com/posts/1")
